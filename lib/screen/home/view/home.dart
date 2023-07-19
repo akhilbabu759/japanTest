@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:japantest/screen/card_details/view/card_details.dart';
 import 'package:japantest/screen/home/controller/home_controller.dart';
 
 import 'widget/date_card.dart';
@@ -92,9 +93,13 @@ class Home extends StatelessWidget {
                         SizedBox(
                           width: Get.size.width * 0.6 * 0.08,
                         ),
-                        Icon(
-                          CupertinoIcons.slider_horizontal_3,color: Colors.grey[500],
-                          size: Get.size.height * 0.05,
+                        IconButton(onPressed: () {
+                          Get.to(CardDetails());
+                        },
+                          icon: Icon(
+                            CupertinoIcons.slider_horizontal_3,color: Colors.grey[500],
+                            size: Get.size.height * 0.05,
+                          ),
                         ),
                         Icon(
                           Icons.favorite_border_outlined,
