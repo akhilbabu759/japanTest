@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:japantest/screen/card_details/view/card_details.dart';
 import 'package:japantest/screen/home/controller/home_controller.dart';
+import 'package:japantest/screen/profile/view/profile.dart';
 
 import 'widget/date_card.dart';
 import 'widget/home_card.dart';
@@ -169,7 +170,9 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(bottom: 34,right: 18 , child: CircleAvatar(backgroundColor: Colors.white,radius: 30,child: Icon(Icons.location_on_outlined,color: Colors.black,size: 30,),))
+          Positioned(bottom: 34,right: 18 , child: CircleAvatar(backgroundColor: Colors.white,radius: 30,child: IconButton(onPressed: () {
+            Get.to(Profile());
+          },icon: Icon(Icons.location_on_outlined,color: Colors.black,size: 30,)),))
         ],
       ),
     );
